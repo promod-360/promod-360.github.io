@@ -4,36 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Promod Chandra Das</title>
+    <!-- FontAwesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #333; background-color: #fff; line-height: 1.6; font-size: 15px; }
-        header { border-bottom: 1px solid #e5e5e5; background: #fff; position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 940px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px 15px; }
-        .brand-name { font-size: 18px; font-weight: 700; color: #333; text-decoration: none; }
-        nav { display: flex; gap: 22px; }
-        nav a { text-decoration: none; color: #555; font-size: 14.5px; font-weight: 500; }
-        nav a:hover, nav a.active { color: #0066cc; font-weight: 600; border-bottom: 2px solid #888; }
-        .layout-container { max-width: 940px; margin: 35px auto; padding: 0 15px; display: flex; gap: 45px; }
-        .sidebar { flex: 1; max-width: 220px; }
-        .profile-img { width: 145px; height: 145px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; display: block; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        .sidebar h2 { font-size: 19px; font-weight: 700; color: #222; margin-bottom: 4px; }
-        .sidebar .designation { font-size: 13px; color: #666; margin-bottom: 18px; line-height: 1.35; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: #333333; background-color: #ffffff; line-height: 1.7; font-size: 15px; }
+        
+        /* Sir's Exact Header Layout & Right-Aligned Nav */
+        header { border-bottom: 1px solid #eaeaea; background: #ffffff; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 980px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 22px 20px; }
+        
+        .brand-name { font-size: 18px; font-weight: 600; color: #444444; text-decoration: none; letter-spacing: -0.2px; }
+        .brand-name:hover { color: #0066cc; }
+
+        nav { display: flex; gap: 30px; }
+        nav a { text-decoration: none; color: #555555; font-size: 14.5px; font-weight: 400; transition: color 0.2s ease; }
+        nav a:hover, nav a.active { color: #0066cc; font-weight: 500; }
+
+        /* Main Container Layout */
+        .layout-container { max-width: 980px; margin: 40px auto; padding: 0 20px; display: flex; gap: 55px; }
+        
+        /* Left Sidebar Profile */
+        .sidebar { flex: 1; max-width: 210px; }
+        .profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; display: block; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+        .sidebar h2 { font-size: 18px; font-weight: 600; color: #222222; margin-bottom: 4px; }
+        .sidebar .designation { font-size: 13px; color: #666666; margin-bottom: 18px; line-height: 1.4; }
+        
+        /* Original Brand Colored Social Icons */
         .social-links { list-style: none; }
-        .social-links li { margin-bottom: 8px; }
-        .social-links a { color: #0066cc; text-decoration: none; font-size: 13.5px; display: inline-flex; align-items: center; gap: 8px; }
-        .social-links i { width: 14px; color: #444; }
+        .social-links li { margin-bottom: 9px; }
+        .social-links a { color: #555555; text-decoration: none; font-size: 13.5px; display: inline-flex; align-items: center; gap: 9px; font-weight: 400; transition: color 0.2s; }
+        .social-links a:hover { color: #0066cc; text-decoration: underline; }
+        
+        .social-links i { width: 16px; font-size: 14px; text-align: center; }
+        .social-links .fa-envelope { color: #ea4335; }    
+        .social-links .fa-facebook { color: #1877f2; }    
+        .social-links .fa-linkedin { color: #0a66c2; }    
+        .social-links .fa-github { color: #24292e; }      
+
+        /* Main Content Area */
         .main-content { flex: 3; }
-        h3.section-heading { font-size: 18px; color: #222; margin-top: 10px; margin-bottom: 15px; font-weight: 700; }
+        h3.section-heading { font-size: 17px; color: #222222; margin-top: 10px; margin-bottom: 15px; font-weight: 600; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; }
+        
+        /* Academic Bullet List */
         ul.academic-bullet-list { list-style: none; margin-bottom: 25px; }
-        ul.academic-bullet-list li { margin-bottom: 16px; position: relative; padding-left: 18px; }
+        ul.academic-bullet-list li { margin-bottom: 18px; position: relative; padding-left: 18px; }
         ul.academic-bullet-list li::before { content: "•"; position: absolute; left: 0; color: #cc3333; font-size: 16px; top: -1px; }
-        .item-title { font-weight: 600; color: #222; font-size: 15.5px; }
-        .sub-detail { font-size: 13.5px; color: #666; margin-top: 3px; }
-        .back-to-top { margin-top: 40px; padding-top: 15px; border-top: 1px solid #eee; }
-        .back-to-top a { color: #0066cc; text-decoration: none; font-weight: 600; font-size: 14px; }
+        
+        .item-title { font-weight: 600; color: #222222; font-size: 15px; }
+        .item-title a { color: #222222; text-decoration: none; transition: color 0.2s; }
+        .item-title a:hover { color: #0066cc; text-decoration: underline; }
+
+        .sub-detail { font-size: 13.5px; color: #666666; margin-top: 3px; }
+
+        /* Back to Top */
+        .back-to-top { margin-top: 40px; padding-top: 15px; border-top: 1px solid #eaeaea; }
+        .back-to-top a { color: #0066cc; text-decoration: none; font-weight: 500; font-size: 13.5px; display: inline-flex; align-items: center; gap: 5px; }
         .back-to-top a:hover { text-decoration: underline; }
-        @media (max-width: 768px) { .layout-container { flex-direction: column; gap: 25px; } .sidebar { max-width: 100%; } .nav-container { flex-direction: column; gap: 12px; } nav { flex-wrap: wrap; justify-content: center; gap: 12px; } }
+
+        @media (max-width: 768px) {
+            .layout-container { flex-direction: column; gap: 25px; }
+            .sidebar { max-width: 100%; }
+            .nav-container { flex-direction: column; gap: 12px; }
+            nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+        }
     </style>
 </head>
 <body>
@@ -51,42 +85,60 @@
     </header>
 
     <div class="layout-container">
+        <!-- Sidebar Profile -->
         <aside class="sidebar">
             <img src="WhatsApp Image 2026-10-22 at 7.51.54 PM.jpeg" alt="Promod Chandra Das" class="profile-img">
             <h2>Promod Das</h2>
-            <p class="designation">Cybersecurity & Network Systems Specialist<br>Green University of Bangladesh</p>
+            <p class="designation">
+                Cybersecurity & Network Systems Specialist<br>
+                <a href="https://www.green.edu.bd" target="_blank" style="color: #0066cc; text-decoration: none;">Green University of Bangladesh</a>
+            </p>
             <ul class="social-links">
                 <li><i class="fas fa-envelope"></i> <a href="mailto:promodd23@gmail.com">Email</a></li>
+                <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/share/1JH6g3Gm2j" target="_blank">Facebook</a></li>
                 <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank">LinkedIn</a></li>
                 <li><i class="fab fa-github"></i> <a href="https://github.com/promod-360" target="_blank">GitHub</a></li>
             </ul>
         </aside>
 
+        <!-- Main Content Area -->
         <main class="main-content">
             <h3 class="section-heading">Featured Technical Projects</h3>
             <ul class="academic-bullet-list">
                 <li>
-                    <div class="item-title">SentinelShield: Advanced Linux Security Hardening Threat Audit Framework</div>
+                    <div class="item-title">
+                        <a href="https://github.com/promod-360/SentinelShield-Advanced-Linux-Security-Hardening-Threat-Audit-Framework" target="_blank">SentinelShield: Advanced Linux Security Hardening Threat Audit Framework <i class="fas fa-external-link-alt" style="font-size: 11px; color: #0066cc;"></i></a>
+                    </div>
                     <div class="sub-detail"><strong>Technologies:</strong> Bash Scripting, Automated Threat Audit Protocols</div>
                 </li>
                 <li>
-                    <div class="item-title">Enterprise File Vault with Hybrid Encryption & Audit Trail</div>
+                    <div class="item-title">
+                        <a href="https://github.com/promod-360/Enterprise-File-Vault-with-Hybrid-Encryption-Audit-Trai" target="_blank">Enterprise File Vault with Hybrid Encryption & Audit Trail <i class="fas fa-external-link-alt" style="font-size: 11px; color: #0066cc;"></i></a>
+                    </div>
                     <div class="sub-detail"><strong>Technologies:</strong> AES-256-GCM, RSA-2048, SHA-512 Cryptography</div>
                 </li>
                 <li>
-                    <div class="item-title">Cyber Immune Grid System (CIG): Self-Healing Network</div>
+                    <div class="item-title">
+                        <a href="https://github.com/promod-360/Cyber-Immunity-Grid-CIG-Self-Healing-Smart-Network" target="_blank">Cyber Immune Grid System (CIG): Self-Healing Network <i class="fas fa-external-link-alt" style="font-size: 11px; color: #0066cc;"></i></a>
+                    </div>
                     <div class="sub-detail"><strong>Technologies:</strong> Nmap, Metasploit, Security Testing Frameworks</div>
                 </li>
                 <li>
-                    <div class="item-title">AI-Driven Zero-Day Threat Indication Anomaly Detection</div>
+                    <div class="item-title">
+                        <a href="https://github.com/promod-360/AI-Driven-Zero-Day-Cyber-Threat-Prediction-and-Anomaly-Detection-System" target="_blank">AI-Driven Zero-Day Threat Indication Anomaly Detection <i class="fas fa-external-link-alt" style="font-size: 11px; color: #0066cc;"></i></a>
+                    </div>
                     <div class="sub-detail"><strong>Technologies:</strong> Python, Machine Learning Anomaly Detection, Cybersecurity Tools</div>
                 </li>
                 <li>
-                    <div class="item-title">Corporate Office Network Infrastructure Design</div>
+                    <div class="item-title">
+                        <a href="https://github.com/promod-360/Corporate-Office-Network-Infrustructure" target="_blank">Corporate Office Network Infrastructure Design <i class="fas fa-external-link-alt" style="font-size: 11px; color: #0066cc;"></i></a>
+                    </div>
                     <div class="sub-detail"><strong>Technologies:</strong> Cisco Packet Tracer, Routing Protocols (TCP/UDP), VLANs, Subnetting</div>
                 </li>
                 <li>
-                    <div class="item-title">EDGE-Project (Python Analysis & Backend)</div>
+                    <div class="item-title">
+                        <a href="https://github.com/promod-360/EDGE-Project-" target="_blank">EDGE-Project (Python Analysis & Backend) <i class="fas fa-external-link-alt" style="font-size: 11px; color: #0066cc;"></i></a>
+                    </div>
                     <div class="sub-detail"><strong>Technologies:</strong> Python, Backend Data Analysis, Django</div>
                 </li>
                 <li>

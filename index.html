@@ -3,112 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promod Chandra Das</title>
-    <!-- FontAwesome for icons -->
+    <title>Promod Chandra Das | Cybersecurity Specialist & Academic Portfolio</title>
+    <!-- FontAwesome for Academic & Professional Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0066cc;
+            --primary-hover: #004999;
+            --text-main: #2b2b2b;
+            --text-muted: #666666;
+            --bg-body: #ffffff;
+            --bg-card: #f9fbfd;
+            --border-color: #eef2f6;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: #333;
-            background-color: #ffffff;
+            color: var(--text-main);
+            background-color: var(--bg-body);
             line-height: 1.7;
             font-size: 15px;
         }
 
-        /* Top Header Navigation */
+        /* Sticky Navigation Bar */
         header {
             border-bottom: 1px solid #eeeeee;
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
         .nav-wrapper {
-            max-width: 960px;
+            max-width: 980px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 20px;
+            padding: 16px 20px;
         }
 
         .brand-name {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
-            color: #2b2b2b;
+            color: var(--text-main);
             text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-name span {
+            color: var(--primary);
         }
 
         nav a {
-            margin-left: 24px;
+            margin-left: 22px;
             text-decoration: none;
-            color: #666666;
-            font-size: 14px;
+            color: var(--text-muted);
+            font-size: 14.5px;
             font-weight: 500;
-            transition: color 0.2s ease;
+            transition: all 0.2s ease;
+            position: relative;
         }
 
-        nav a:hover {
-            color: #0066cc;
+        nav a:hover, nav a.active {
+            color: var(--primary);
         }
 
-        /* Main Container Layout */
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        /* Layout Container */
         .layout-container {
-            max-width: 960px;
+            max-width: 980px;
             margin: 40px auto;
             padding: 0 20px;
             display: flex;
-            gap: 50px;
+            gap: 45px;
         }
 
-        /* Left Sidebar */
+        /* Sidebar Profile */
         .sidebar {
             flex: 1;
-            max-width: 230px;
+            max-width: 240px;
+        }
+
+        .profile-img-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 18px;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 14px;
+            height: 14px;
+            background: #2ec4b6;
+            border: 2px solid #fff;
+            border-radius: 50%;
         }
 
         .sidebar h2 {
-            font-size: 20px;
+            font-size: 21px;
             font-weight: 700;
-            color: #222;
-            margin-bottom: 6px;
+            color: #1a1a1a;
+            margin-bottom: 4px;
         }
 
         .sidebar .role {
-            font-size: 13px;
-            color: #666;
+            font-size: 13.5px;
+            color: var(--text-muted);
             margin-bottom: 20px;
-            line-height: 1.4;
+            line-height: 1.45;
         }
 
         .social-links {
             list-style: none;
             border-top: 1px solid #eeeeee;
-            padding-top: 15px;
+            padding-top: 18px;
         }
 
         .social-links li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .social-links a {
-            color: #444;
+            color: #444444;
             text-decoration: none;
             font-size: 13.5px;
             display: flex;
@@ -118,91 +166,158 @@
         }
 
         .social-links a:hover {
-            color: #0066cc;
+            color: var(--primary);
         }
 
         .social-links i {
-            width: 16px;
-            color: #555;
+            width: 18px;
+            color: var(--primary);
         }
 
-        /* Main Content Area */
+        /* Main Content */
         .main-content {
             flex: 3;
         }
 
+        .intro-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
         .welcome-text {
-            font-size: 16px;
-            margin-bottom: 18px;
-            color: #444;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-main);
         }
 
         .bio-text {
             color: #444;
-            margin-bottom: 25px;
+            margin-bottom: 14px;
             text-align: justify;
         }
 
         .bio-text a {
-            color: #0066cc;
+            color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
 
         .bio-text a:hover {
             text-decoration: underline;
         }
 
+        /* Section Titles */
         h3 {
             font-size: 19px;
-            color: #222222;
-            margin-top: 35px;
-            margin-bottom: 15px;
+            color: #1a1a1a;
+            margin-top: 38px;
+            margin-bottom: 18px;
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #f0f4f8;
+            padding-bottom: 6px;
         }
 
+        /* Interactive Filter Tabs for Projects */
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #f0f4f8;
+            border: none;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        /* Lists Styling */
         .news-list, .academic-list {
             list-style: none;
         }
 
         .news-list li, .academic-list li {
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             position: relative;
-            padding-left: 20px;
+            padding-left: 22px;
+            transition: transform 0.15s ease;
         }
 
         .news-list li::before, .academic-list li::before {
             content: "•";
             position: absolute;
             left: 0;
-            color: #0066cc;
-            font-weight: bold;
+            color: var(--primary);
+            font-size: 18px;
+            line-height: 1;
+            top: 2px;
         }
 
         .date-tag {
             font-weight: 600;
-            color: #0066cc;
+            color: var(--primary);
+            font-size: 13.5px;
         }
 
         .badge-tag {
-            background-color: #f0f4f8;
-            color: #0066cc;
+            background-color: #eef5ff;
+            color: var(--primary);
             font-size: 12px;
-            padding: 2px 7px;
-            border-radius: 3px;
+            padding: 3px 8px;
+            border-radius: 4px;
             font-weight: 600;
             margin-right: 6px;
+            display: inline-block;
+        }
+
+        .tech-stack {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .reference-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .reference-card strong {
+            color: #1a1a1a;
+            font-size: 15.5px;
         }
 
         footer {
-            max-width: 960px;
+            max-width: 980px;
             margin: 60px auto 30px auto;
             padding: 20px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #eeeeee;
             text-align: center;
-            font-size: 13px;
+            font-size: 13.5px;
             color: #888;
         }
 
+        /* Responsive Layout */
         @media (max-width: 768px) {
             .layout-container {
                 flex-direction: column;
@@ -216,17 +331,22 @@
                 display: inline-block;
                 text-align: left;
             }
+            nav a {
+                margin-left: 12px;
+                font-size: 13.5px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
+    <!-- Top Navigation -->
     <header>
         <div class="nav-wrapper">
-            <a href="#" class="brand-name">Promod Chandra Das</a>
+            <a href="#" class="brand-name">Promod Chandra <span>Das</span></a>
             <nav>
-                <a href="#home">Home</a>
+                <a href="#about" class="active">Home</a>
+                <a href="#news">News</a>
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
                 <a href="#certifications">Certifications</a>
@@ -234,70 +354,141 @@
         </div>
     </header>
 
-    <div class="layout-container" id="home">
-        <!-- Sidebar -->
+    <div class="layout-container">
+        <!-- Sidebar Profile -->
         <aside class="sidebar">
-            <img src="WhatsApp Image 2026-10-22 at 7.51.54 PM.jpeg" alt="Promod Chandra Das" class="profile-img">
+            <div class="profile-img-container">
+                <img src="WhatsApp Image 2026-10-22 at 7.51.54 PM.jpeg" alt="Promod Chandra Das" class="profile-img">
+                <div class="status-badge" title="Available for Cybersecurity Research & Roles"></div>
+            </div>
             <h2>Promod Das</h2>
-            <p class="role">Cybersecurity & Network Systems Specialist</p>
+            <p class="role">Cybersecurity Network Systems Specialist <br><small>IEEE CS GUB SBC Secretary</small></p>
             
             <ul class="social-links">
-                <li><a href="mailto:promodd23@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-                <li><a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                <li><a href="https://github.com/promod-360" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="mailto:promodd23@gmail.com"><i class="fas fa-envelope"></i> promodd23@gmail.com</a></li>
+                <li><a href="tel:01825038553"><i class="fas fa-phone"></i> 01825038553</a></li>
+                <li><a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
+                <li><a href="https://github.com/promod-360" target="_blank"><i class="fab fa-github"></i> github.com/promod-360</a></li>
+                <li><a href="#"><i class="fas fa-location-dot"></i> Dhaka, Bangladesh</a></li>
             </ul>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <p class="welcome-text">Thanks for visiting!</p>
-            
-            <p class="bio-text">
-                I am <strong>Promod Chandra Das</strong>, a proactive Cybersecurity and Network Systems Specialist with hands-on experience in automated threat auditing, vulnerability assessments, and security hardening. I am certified by Google, Cisco, and Microsoft, with a strong background in ethical hacking and network security protocols. My technical work focuses on Linux security hardening, hybrid encryption frameworks, and network security analysis.
-            </p>
+            <section id="about" class="intro-box">
+                <p class="welcome-text">Thanks for visiting my profile!</p>
+                <p class="bio-text">
+                    I am <strong>Promod Chandra Das</strong>, a proactive Cybersecurity Network Systems Specialist with hands-on experience in automated threat auditing, vulnerability assessments, and security hardening[cite: 15]. Certified by <strong>Google, Cisco, and Microsoft</strong>, I possess a solid background in ethical hacking and network security protocols[cite: 15].
+                </p>
+                <p class="bio-text">
+                    I have a proven track record of developing security tools like <strong>SentinelShield</strong> and leading academic and technical initiatives as Secretary of the IEEE Computer Society GUB Student Branch Chapter[cite: 15, 16]. Passionate about protecting enterprise infrastructures and building resilient digital systems[cite: 15].
+                </p>
+                <p class="bio-text">
+                    For detailed source repositories, explore my <a href="https://github.com/promod-360" target="_blank"><strong>GitHub Repositories</strong></a> and connected <a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank"><strong>LinkedIn Network</strong></a>[cite: 15].
+                </p>
+            </section>
 
-            <p class="bio-text">
-                For additional information, please see my <a href="https://github.com/promod-360" target="_blank"><strong>GitHub Projects</strong></a> and <a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank"><strong>LinkedIn Profile</strong></a>.
-            </p>
+            <!-- News & Leadership Section -->
+            <section id="news">
+                <h3><i class="fas fa-newspaper"></i> Recent News & Leadership</h3>
+                <ul class="news-list">
+                    <li><span class="date-tag">[May 2026 – Sep 2026]</span> Appointed & served as <strong>Secretary</strong> of the IEEE Computer Society GUB Student Branch Chapter[cite: 16].</li>
+                    <li><span class="date-tag">[Jan 2026]</span> Completed <strong>Techathon Nationals Rover Summit 2026</strong> organized by IUT Robotics Society[cite: 15].</li>
+                    <li><span class="date-tag">[Jan 2025 – Jan 2026]</span> Served as <strong>Membership Development Coordinator</strong> at IEEE Student Branch, Green University of Bangladesh[cite: 16].</li>
+                    <li><span class="date-tag">[Jul 2025]</span> Attained <strong>Ethical Hacker Certification</strong> from Cisco Networking Academy and CCEP from Red Team Leaders[cite: 15].</li>
+                </ul>
+            </section>
 
-            <!-- Recent Highlights Section -->
-            <h3>Recent News & Leadership</h3>
-            <ul class="news-list">
-                <li><span class="date-tag">[May 2026 - Sep 2026]</span> Served as the <strong>Secretary</strong> of IEEE Computer Society GUB Student Branch Chapter.</li>
-                <li><span class="date-tag">[Jul 2025]</span> Achieved <strong>Ethical Hacker Certification</strong> from Cisco Networking Academy and CCEP from Red Team Leaders.</li>
-                <li><span class="date-tag">[Jul 2025]</span> Completed <strong>Foundations of Cybersecurity</strong> certification from Google (Coursera).</li>
-            </ul>
+            <!-- Projects Section with Interactive Filter -->
+            <section id="projects">
+                <h3><i class="fas fa-laptop-code"></i> Featured Technical Projects</h3>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+                    <button class="filter-btn" onclick="filterProjects('security')">Cybersecurity</button>
+                    <button class="filter-btn" onclick="filterProjects('net')">Networking</button>
+                    <button class="filter-btn" onclick="filterProjects('dev')">Web/Dev</button>
+                </div>
 
-            <!-- Featured Projects Section -->
-            <h3 id="projects">Featured Projects</h3>
-            <ul class="academic-list">
-                <li><strong>SentinelShield:</strong> Advanced Linux Security Hardening & Threat Audit Framework (Bash Script).</li>
-                <li><strong>Enterprise File Vault:</strong> Secure File Storage with Hybrid Encryption (AES-256-GCM, RSA-2048, SHA-512).</li>
-                <li><strong>Cyber Immune Grid System (CIG):</strong> Self-Healing Network implementation using Nmap and Metasploit.</li>
-                <li><strong>Eduatlas:</strong> Web-based admission platform (PHP, MySQL, JavaScript).</li>
-            </ul>
+                <ul class="academic-list" id="project-list">
+                    <li data-category="security">
+                        <strong>SentinelShield: Advanced Linux Security Hardening Framework</strong>[cite: 16]
+                        <div class="tech-stack">Tech: Bash Scripting, Threat Audit Automation[cite: 16]</div>
+                    </li>
+                    <li data-category="security">
+                        <strong>Enterprise File Vault with Hybrid Encryption & Audit Trail</strong>[cite: 16]
+                        <div class="tech-stack">Tech: AES-256-GCM, RSA-2048, SHA-512[cite: 16]</div>
+                    </li>
+                    <li data-category="security net">
+                        <strong>Cyber Immune Grid System (CIG): Self-Healing Network</strong>[cite: 16]
+                        <div class="tech-stack">Tech: Nmap, Metasploit, Security Protocols[cite: 15, 16]</div>
+                    </li>
+                    <li data-category="security">
+                        <strong>AI-Driven Zero-Day Threat Indication Anomaly Detection</strong>[cite: 16]
+                        <div class="tech-stack">Tech: Python, Machine Learning, Security Auditing Tools[cite: 16]</div>
+                    </li>
+                    <li data-category="net">
+                        <strong>Corporate Office Network Infrastructure Design</strong>[cite: 16]
+                        <div class="tech-stack">Tech: Cisco Packet Tracer, Routing Protocols (TCP/UDP), VLANs, Subnetting[cite: 16]</div>
+                    </li>
+                    <li data-category="dev">
+                        <strong>Eduatlas: Admission Assistance Platform</strong>[cite: 16]
+                        <div class="tech-stack">Tech: HTML, CSS, JavaScript, PHP, MySQL[cite: 16]</div>
+                    </li>
+                    <li data-category="dev">
+                        <strong>EDGE Project (Python Analysis & Backend)</strong>[cite: 15, 16]
+                        <div class="tech-stack">Tech: Python, Data Analysis, Django[cite: 15, 16]</div>
+                    </li>
+                </ul>
+            </section>
 
             <!-- Education Section -->
-            <h3 id="education">Education</h3>
-            <ul class="academic-list">
-                <li>
-                    <strong>B.Sc. in Computer Science & Engineering</strong> — Green University of Bangladesh
-                    <br><small style="color: #666;">CGPA: 3.25 | Expected Graduation: Jan 2027</small>
-                </li>
-                <li>
-                    <strong>Higher Secondary Certificate (HSC) in Science</strong> — Gridkalindia Hazera Hasmat Degree College
-                    <br><small style="color: #666;">GPA: 4.58 | Completed: 2021</small>
-                </li>
-            </ul>
+            <section id="education">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <ul class="academic-list">
+                    <li>
+                        <strong>Bachelor of Science in Computer Science & Engineering</strong> — Green University of Bangladesh[cite: 16]
+                        <br><small style="color: #666;">CGPA: 3.25 | Expected Graduation: January 2027[cite: 16]</small>
+                    </li>
+                    <li>
+                        <strong>Higher Secondary Certificate (HSC) in Science</strong> — Gridkalindia Hazera Hasmat Degree College[cite: 16]
+                        <br><small style="color: #666;">GPA: 4.58 | Completed: 2021[cite: 16]</small>
+                    </li>
+                </ul>
+            </section>
 
             <!-- Certifications Section -->
-            <h3 id="certifications">Certifications & Training</h3>
-            <ul class="academic-list">
-                <li><span class="badge-tag">Certification</span> Certified Cybersecurity Educator Professional (CCEP) — Red Team Leaders</li>
-                <li><span class="badge-tag">Certification</span> Ethical Hacker — Cisco Networking Academy</li>
-                <li><span class="badge-tag">Certification</span> Foundations of Cybersecurity — Google (Coursera)</li>
-                <li><span class="badge-tag">Training</span> Python (Django) 80-Hour Training — IIT, Jahangirnagar University (EDGE Project)</li>
-            </ul>
+            <section id="certifications">
+                <h3><i class="fas fa-certificate"></i> Certifications, Frameworks & Simulations</h3>
+                <ul class="academic-list">
+                    <li><span class="badge-tag">Certification</span> Certified Cybersecurity Educator Professional (CCEP) — Red Team Leaders (Jul 2025)[cite: 15]</li>
+                    <li><span class="badge-tag">Certification</span> Ethical Hacker — Cisco Networking Academy (Jul 2025)[cite: 15]</li>
+                    <li><span class="badge-tag">Certification</span> Foundations of Cybersecurity & Play It Safe — Google / Coursera (Jul 2025)[cite: 15]</li>
+                    <li><span class="badge-tag">Certification</span> Connect and Protect: Networks and Network Security — Google (Dec 2024)[cite: 15]</li>
+                    <li><span class="badge-tag">Certification</span> Fundamentals of AI Security & Row-Level Security — Microsoft[cite: 15]</li>
+                    <li><span class="badge-tag">Training</span> Python (Django) 80-Hours Training — IIT, Jahangirnagar University (EDGE Project)[cite: 15]</li>
+                    <li><span class="badge-tag">Framework</span> ISO/IEC 27001 (ISMS), ISO 9001:2015 (QMS), NIST Cyber Security Framework (CSF) — Alison[cite: 15]</li>
+                    <li><span class="badge-tag">Simulation</span> Cybersecurity Analyst, Management & Risk Simulations — TATA, ANZ, Mastercard, Commonwealth Bank (Forage)[cite: 15]</li>
+                </ul>
+            </section>
+
+            <!-- References Section -->
+            <section id="references">
+                <h3><i class="fas fa-user-check"></i> Academic References</h3>
+                
+                <div class="reference-card">
+                    <strong>Prof. Dr. Md. Saiful Azad</strong>[cite: 16]<br>
+                    <small>Professor, Dept. of Computer Science and Engineering, United International University[cite: 16]</small><br>
+                    <small>Former Dean, FSE & Chairperson, Dept. of CSE, Green University of Bangladesh[cite: 16]</small><br>
+                    <small><i class="fas fa-envelope"></i> saiful@cse.uiu.ac.bd</small>[cite: 16]
+                </div>
+
+                <div class="reference-card">
+                    <strong>Palash Roy</strong>[cite: 16]<br>
+                    <small>Lecturer, Dept. of Computer Science and Engineering, University of Dhaka[cite: 16]</small><br>
+                    <small><i class="fas fa-phone"></i> +8801846869580 | <i class="fas fa-envelope"></i> palash@cse.du.ac.bd | <i class="fas fa-globe"></i> palashroy975.github.io</small>[cite: 16]
+                </div>
+            </section>
         </main>
     </div>
 
@@ -305,5 +496,44 @@
         <p>&copy; 2026 Promod Chandra Das. Hosted on GitHub Pages.</p>
     </footer>
 
+    <!-- Interactive JavaScript -->
+    <script>
+        // Interactive Project Filter Function
+        function filterProjects(category) {
+            const items = document.querySelectorAll('#project-list li');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category').includes(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Active Navigation Highlighter on Scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

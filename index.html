@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promod Chandra Das - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; background-color: #fcfcfc; line-height: 1.6; }
+        header { background: #fff; border-bottom: 1px solid #e5e5e5; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 20px; font-weight: bold; color: #2c3e50; text-decoration: none; }
+        nav a { margin-left: 20px; text-decoration: none; color: #555; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+        nav a:hover { color: #0066cc; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; display: flex; gap: 40px; }
+        .sidebar { flex: 1; max-width: 250px; text-align: center; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #0066cc; }
+        .sidebar h2 { font-size: 22px; color: #2c3e50; margin-bottom: 5px; }
+        .sidebar p { font-size: 14px; color: #666; margin-bottom: 15px; }
+        .social-links { list-style: none; text-align: left; margin-top: 20px; }
+        .social-links li { margin-bottom: 10px; }
+        .social-links a { color: #444; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 10px; }
+        .social-links a:hover { color: #0066cc; }
+        .main-content { flex: 3; }
+        .intro-box { background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #eee; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        h3 { font-size: 20px; color: #2c3e50; border-bottom: 2px solid #0066cc; padding-bottom: 5px; margin-bottom: 15px; margin-top: 25px; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; font-size: 15px; }
+        .badge { background: #eef5ff; color: #0066cc; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+        footer { text-align: center; padding: 20px; border-top: 1px solid #eee; color: #777; font-size: 14px; margin-top: 50px; }
+        @media (max-width: 768px) { .container { flex-direction: column; } .sidebar { max-width: 100%; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Promod Chandra Das</a>
+            <nav>
+                <a href="#about">Home</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Profile -->
+        <aside class="sidebar">
+            <img src="https://via.placeholder.com/180" alt="Promod Chandra Das" class="profile-img">
+            <h2>Promod Das</h2>
+            <p>Cybersecurity & Network Systems Specialist</p>
+            <ul class="social-links">
+                <li><a href="mailto:promodd23@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                <li><a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/promod-360" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="about" class="intro-box">
+                <h2>Welcome to my page!</h2>
+                <p style="margin-top: 10px;">
+                    I am <strong>Promod Chandra Das</strong>, a proactive Cybersecurity and Network Systems Specialist with hands-on experience in automated threat auditing, vulnerability assessments, and security hardening. I am certified by Google, Cisco, and Microsoft, with a strong background in ethical hacking and network security protocols.
+                </p>
+            </section>
+
+            <section id="education">
+                <h3>Education</h3>
+                <ul>
+                    <li>
+                        <strong>B.Sc. in Computer Science & Engineering</strong> — Green University of Bangladesh
+                        <br><small>CGPA: 3.25 | Expected Graduation: Jan 2027</small>
+                    </li>
+                    <li>
+                        <strong>Higher Secondary Certificate (HSC) in Science</strong> — Gridkalindia Hazera Hasmat Degree College
+                        <br><small>GPA: 4.58 | Completed: 2021</small>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h3>Featured Projects</h3>
+                <ul>
+                    <li><strong>SentinelShield:</strong> Advanced Linux Security Hardening Threat Audit Framework (Bash Script)</li>
+                    <li><strong>Enterprise File Vault:</strong> Secure File Storage with Hybrid Encryption (AES-256-GCM, RSA-2048, SHA-512)</li>
+                    <li><strong>Cyber Immune Grid System (CIG):</strong> Self-Healing Network (Nmap, Metasploit)</li>
+                    <li><strong>Eduatlas:</strong> Web-based admission platform (PHP, MySQL, JS)</li>
+                </ul>
+            </section>
+
+            <section id="certifications">
+                <h3>Certifications & Leadership</h3>
+                <ul>
+                    <li><span class="badge">Secretary</span> IEEE Computer Society GUB Student Branch Chapter</li>
+                    <li>Certified Cybersecurity Educator Professional (CCEP) — Red Team Leaders</li>
+                    <li>Ethical Hacker — Cisco Networking Academy</li>
+                    <li>Foundations of Cybersecurity — Google (Coursera)</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Promod Chandra Das. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>

@@ -3,20 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promod Chandra Das | Cybersecurity Specialist & Academic Portfolio</title>
-    <!-- FontAwesome for Academic & Professional Icons -->
+    <title>Promod Chandra Das</title>
+    <!-- FontAwesome for Academic Social Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0066cc;
-            --primary-hover: #004999;
-            --text-main: #2b2b2b;
-            --text-muted: #666666;
-            --bg-body: #ffffff;
-            --bg-card: #f9fbfd;
-            --border-color: #eef2f6;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -29,511 +19,498 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: var(--text-main);
-            background-color: var(--bg-body);
-            line-height: 1.7;
+            color: #333333;
+            background-color: #ffffff;
+            line-height: 1.6;
             font-size: 15px;
         }
 
-        /* Sticky Navigation Bar */
+        /* Top Academic Header Navigation Bar */
         header {
-            border-bottom: 1px solid #eeeeee;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
+            border-bottom: 1px solid #e5e5e5;
+            background: #ffffff;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .nav-wrapper {
-            max-width: 980px;
+        .nav-container {
+            max-width: 940px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 20px;
+            padding: 20px 15px;
         }
 
         .brand-name {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 700;
-            color: var(--text-main);
+            color: #333333;
             text-decoration: none;
-            letter-spacing: -0.3px;
+            cursor: pointer;
         }
 
-        .brand-name span {
-            color: var(--primary);
+        nav {
+            display: flex;
+            gap: 22px;
         }
 
         nav a {
-            margin-left: 22px;
             text-decoration: none;
-            color: var(--text-muted);
+            color: #555555;
             font-size: 14.5px;
             font-weight: 500;
-            transition: all 0.2s ease;
+            cursor: pointer;
+            transition: color 0.15s ease;
             position: relative;
+            padding-bottom: 3px;
         }
 
-        nav a:hover, nav a.active {
-            color: var(--primary);
+        nav a:hover {
+            color: #0066cc;
         }
 
-        nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -18px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--primary);
+        nav a.active {
+            color: #333333;
+            font-weight: 600;
+            border-bottom: 2px solid #888888;
         }
 
-        /* Layout Container */
+        /* Main Container Layout */
         .layout-container {
-            max-width: 980px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 940px;
+            margin: 35px auto;
+            padding: 0 15px;
             display: flex;
             gap: 45px;
         }
 
-        /* Sidebar Profile */
+        /* Left Academic Sidebar Profile */
         .sidebar {
             flex: 1;
-            max-width: 240px;
-        }
-
-        .profile-img-container {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 18px;
+            max-width: 220px;
         }
 
         .profile-img {
-            width: 160px;
-            height: 160px;
+            width: 145px;
+            height: 145px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #ffffff;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-        }
-
-        .status-badge {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            width: 14px;
-            height: 14px;
-            background: #2ec4b6;
-            border: 2px solid #fff;
-            border-radius: 50%;
+            margin-bottom: 15px;
+            display: block;
         }
 
         .sidebar h2 {
-            font-size: 21px;
+            font-size: 19px;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #222222;
             margin-bottom: 4px;
         }
 
-        .sidebar .role {
-            font-size: 13.5px;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            line-height: 1.45;
+        .sidebar .designation {
+            font-size: 13px;
+            color: #666666;
+            margin-bottom: 18px;
+            line-height: 1.35;
         }
 
         .social-links {
             list-style: none;
-            border-top: 1px solid #eeeeee;
-            padding-top: 18px;
         }
 
         .social-links li {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .social-links a {
-            color: #444444;
+            color: #0066cc;
             text-decoration: none;
             font-size: 13.5px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
-            transition: color 0.2s;
+            gap: 8px;
         }
 
         .social-links a:hover {
-            color: var(--primary);
-        }
-
-        .social-links i {
-            width: 18px;
-            color: var(--primary);
-        }
-
-        /* Main Content */
-        .main-content {
-            flex: 3;
-        }
-
-        .intro-box {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 24px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-        .welcome-text {
-            font-size: 17px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--text-main);
-        }
-
-        .bio-text {
-            color: #444;
-            margin-bottom: 14px;
-            text-align: justify;
-        }
-
-        .bio-text a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .bio-text a:hover {
             text-decoration: underline;
         }
 
-        /* Section Titles */
-        h3 {
-            font-size: 19px;
-            color: #1a1a1a;
-            margin-top: 38px;
-            margin-bottom: 18px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid #f0f4f8;
-            padding-bottom: 6px;
+        .social-links i {
+            width: 14px;
+            color: #444444;
         }
 
-        /* Interactive Filter Tabs for Projects */
-        .filter-buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 18px;
-            flex-wrap: wrap;
+        /* Main Content Area */
+        .main-content {
+            flex: 3;
+            min-height: 500px;
         }
 
-        .filter-btn {
-            background: #f0f4f8;
-            border: none;
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.2s;
-            font-weight: 500;
+        /* Page Tab Visibility Animation */
+        .tab-page {
+            display: none;
         }
 
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: #fff;
+        .tab-page.active {
+            display: block;
         }
 
-        /* Lists Styling */
-        .news-list, .academic-list {
-            list-style: none;
+        .welcome-title {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 15px;
         }
 
-        .news-list li, .academic-list li {
+        p.bio-paragraph {
+            color: #333333;
             margin-bottom: 16px;
-            position: relative;
-            padding-left: 22px;
-            transition: transform 0.15s ease;
+            text-align: justify;
         }
 
-        .news-list li::before, .academic-list li::before {
+        p.bio-paragraph a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        p.bio-paragraph a:hover {
+            text-decoration: underline;
+        }
+
+        h3.section-heading {
+            font-size: 18px;
+            color: #222222;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Minimal Academic Bullet Points */
+        ul.academic-bullet-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        ul.academic-bullet-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 18px;
+            color: #333333;
+        }
+
+        ul.academic-bullet-list li::before {
             content: "•";
             position: absolute;
             left: 0;
-            color: var(--primary);
-            font-size: 18px;
-            line-height: 1;
-            top: 2px;
+            color: #cc3333; /* Academic highlighted bullet style */
+            font-size: 16px;
+            top: -1px;
         }
 
         .date-tag {
             font-weight: 600;
-            color: var(--primary);
-            font-size: 13.5px;
+            color: #0066cc;
         }
 
-        .badge-tag {
-            background-color: #eef5ff;
-            color: var(--primary);
-            font-size: 12px;
-            padding: 3px 8px;
-            border-radius: 4px;
+        .date-tag a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .date-tag a:hover {
+            text-decoration: underline;
+        }
+
+        .item-title {
             font-weight: 600;
-            margin-right: 6px;
-            display: inline-block;
+            color: #222222;
         }
 
-        .tech-stack {
-            font-size: 13px;
-            color: var(--text-muted);
+        .sub-detail {
+            font-size: 13.5px;
+            color: #666666;
             margin-top: 2px;
         }
 
-        .reference-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 16px 20px;
-            border-radius: 6px;
-            margin-bottom: 15px;
+        /* Back to Top Styling (Matching Image Demo) */
+        .back-to-top {
+            margin-top: 40px;
+            padding-top: 15px;
+            margin-bottom: 10px;
         }
 
-        .reference-card strong {
-            color: #1a1a1a;
-            font-size: 15.5px;
+        .back-to-top a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
         }
 
-        footer {
-            max-width: 980px;
-            margin: 60px auto 30px auto;
-            padding: 20px;
-            border-top: 1px solid #eeeeee;
-            text-align: center;
-            font-size: 13.5px;
-            color: #888;
+        .back-to-top a:hover {
+            text-decoration: underline;
         }
 
-        /* Responsive Layout */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .layout-container {
                 flex-direction: column;
-                gap: 30px;
+                gap: 25px;
             }
             .sidebar {
                 max-width: 100%;
-                text-align: center;
             }
-            .social-links {
-                display: inline-block;
-                text-align: left;
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
             }
-            nav a {
-                margin-left: 12px;
-                font-size: 13.5px;
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation -->
-    <header>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-name">Promod Chandra <span>Das</span></a>
+    <!-- Header Navigation Bar -->
+    <header id="top">
+        <div class="nav-container">
+            <a class="brand-name" onclick="switchPage('home')">Promod Chandra Das</a>
             <nav>
-                <a href="#about" class="active">Home</a>
-                <a href="#news">News</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#certifications">Certifications</a>
+                <a onclick="switchPage('home')" id="nav-home" class="active">Home</a>
+                <a onclick="switchPage('projects')" id="nav-projects">Projects</a>
+                <a onclick="switchPage('education')" id="nav-education">Education & Awards</a>
+                <a onclick="switchPage('activities')" id="nav-activities">Activities</a>
+                <a onclick="switchPage('cv')" id="nav-cv">CV</a>
             </nav>
         </div>
     </header>
 
     <div class="layout-container">
-        <!-- Sidebar Profile -->
+        <!-- Sidebar Profile Profile (Fixed Left Alignment) -->
         <aside class="sidebar">
-            <div class="profile-img-container">
-                <img src="WhatsApp Image 2026-10-22 at 7.51.54 PM.jpeg" alt="Promod Chandra Das" class="profile-img">
-                <div class="status-badge" title="Available for Cybersecurity Research & Roles"></div>
-            </div>
+            <img src="WhatsApp Image 2026-10-22 at 7.51.54 PM.jpeg" alt="Promod Chandra Das" class="profile-img">
             <h2>Promod Das</h2>
-            <p class="role">Cybersecurity Network Systems Specialist <br><small>IEEE CS GUB SBC Secretary</small></p>
+            <p class="designation">
+                Cybersecurity & Network Systems Specialist<br>
+                Green University of Bangladesh
+            </p>
             
             <ul class="social-links">
-                <li><a href="mailto:promodd23@gmail.com"><i class="fas fa-envelope"></i> promodd23@gmail.com</a></li>
-                <li><a href="tel:01825038553"><i class="fas fa-phone"></i> 01825038553</a></li>
-                <li><a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></li>
-                <li><a href="https://github.com/promod-360" target="_blank"><i class="fab fa-github"></i> github.com/promod-360</a></li>
-                <li><a href="#"><i class="fas fa-location-dot"></i> Dhaka, Bangladesh</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="mailto:promodd23@gmail.com">Email</a></li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank">LinkedIn</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/promod-360" target="_blank">GitHub</a></li>
             </ul>
         </aside>
 
-        <!-- Main Content -->
+        <!-- Dynamic Main Content Area -->
         <main class="main-content">
-            <section id="about" class="intro-box">
-                <p class="welcome-text">Thanks for visiting my profile!</p>
-                <p class="bio-text">
-                    I am <strong>Promod Chandra Das</strong>, a proactive Cybersecurity Network Systems Specialist with hands-on experience in automated threat auditing, vulnerability assessments, and security hardening[cite: 15]. Certified by <strong>Google, Cisco, and Microsoft</strong>, I possess a solid background in ethical hacking and network security protocols[cite: 15].
-                </p>
-                <p class="bio-text">
-                    I have a proven track record of developing security tools like <strong>SentinelShield</strong> and leading academic and technical initiatives as Secretary of the IEEE Computer Society GUB Student Branch Chapter[cite: 15, 16]. Passionate about protecting enterprise infrastructures and building resilient digital systems[cite: 15].
-                </p>
-                <p class="bio-text">
-                    For detailed source repositories, explore my <a href="https://github.com/promod-360" target="_blank"><strong>GitHub Repositories</strong></a> and connected <a href="https://linkedin.com/in/promod-chondra-das-894b32275" target="_blank"><strong>LinkedIn Network</strong></a>[cite: 15].
-                </p>
-            </section>
-
-            <!-- News & Leadership Section -->
-            <section id="news">
-                <h3><i class="fas fa-newspaper"></i> Recent News & Leadership</h3>
-                <ul class="news-list">
-                    <li><span class="date-tag">[May 2026 – Sep 2026]</span> Appointed & served as <strong>Secretary</strong> of the IEEE Computer Society GUB Student Branch Chapter[cite: 16].</li>
-                    <li><span class="date-tag">[Jan 2026]</span> Completed <strong>Techathon Nationals Rover Summit 2026</strong> organized by IUT Robotics Society[cite: 15].</li>
-                    <li><span class="date-tag">[Jan 2025 – Jan 2026]</span> Served as <strong>Membership Development Coordinator</strong> at IEEE Student Branch, Green University of Bangladesh[cite: 16].</li>
-                    <li><span class="date-tag">[Jul 2025]</span> Attained <strong>Ethical Hacker Certification</strong> from Cisco Networking Academy and CCEP from Red Team Leaders[cite: 15].</li>
-                </ul>
-            </section>
-
-            <!-- Projects Section with Interactive Filter -->
-            <section id="projects">
-                <h3><i class="fas fa-laptop-code"></i> Featured Technical Projects</h3>
+            
+            <!-- 1. HOME PAGE TAB -->
+            <div id="page-home" class="tab-page active">
+                <p class="welcome-title">Thanks for visiting!</p>
                 
-                <div class="filter-buttons">
-                    <button class="filter-btn active" onclick="filterProjects('all')">All</button>
-                    <button class="filter-btn" onclick="filterProjects('security')">Cybersecurity</button>
-                    <button class="filter-btn" onclick="filterProjects('net')">Networking</button>
-                    <button class="filter-btn" onclick="filterProjects('dev')">Web/Dev</button>
-                </div>
+                <p class="bio-paragraph">
+                    I am <strong>Promod Chandra Das</strong>, a proactive Cybersecurity Network Systems Specialist with hands-on experience in automated threat auditing, vulnerability assessments, and security hardening[cite: 21]. Certified by <a href="#cv">Google, Cisco, and Microsoft</a>, I possess a strong background in ethical hacking and network security protocols[cite: 21]. Previously, I served as the Secretary of the <a href="https://github.com/promod-360" target="_blank">IEEE Computer Society GUB Student Branch Chapter</a>[cite: 21, 22].
+                </p>
 
-                <ul class="academic-list" id="project-list">
-                    <li data-category="security">
-                        <strong>SentinelShield: Advanced Linux Security Hardening Framework</strong>[cite: 16]
-                        <div class="tech-stack">Tech: Bash Scripting, Threat Audit Automation[cite: 16]</div>
-                    </li>
-                    <li data-category="security">
-                        <strong>Enterprise File Vault with Hybrid Encryption & Audit Trail</strong>[cite: 16]
-                        <div class="tech-stack">Tech: AES-256-GCM, RSA-2048, SHA-512[cite: 16]</div>
-                    </li>
-                    <li data-category="security net">
-                        <strong>Cyber Immune Grid System (CIG): Self-Healing Network</strong>[cite: 16]
-                        <div class="tech-stack">Tech: Nmap, Metasploit, Security Protocols[cite: 15, 16]</div>
-                    </li>
-                    <li data-category="security">
-                        <strong>AI-Driven Zero-Day Threat Indication Anomaly Detection</strong>[cite: 16]
-                        <div class="tech-stack">Tech: Python, Machine Learning, Security Auditing Tools[cite: 16]</div>
-                    </li>
-                    <li data-category="net">
-                        <strong>Corporate Office Network Infrastructure Design</strong>[cite: 16]
-                        <div class="tech-stack">Tech: Cisco Packet Tracer, Routing Protocols (TCP/UDP), VLANs, Subnetting[cite: 16]</div>
-                    </li>
-                    <li data-category="dev">
-                        <strong>Eduatlas: Admission Assistance Platform</strong>[cite: 16]
-                        <div class="tech-stack">Tech: HTML, CSS, JavaScript, PHP, MySQL[cite: 16]</div>
-                    </li>
-                    <li data-category="dev">
-                        <strong>EDGE Project (Python Analysis & Backend)</strong>[cite: 15, 16]
-                        <div class="tech-stack">Tech: Python, Data Analysis, Django[cite: 15, 16]</div>
-                    </li>
-                </ul>
-            </section>
+                <p class="bio-paragraph">
+                    My practical expertise includes developing automated security auditing tools like SentinelShield, enterprise file security systems with hybrid encryption, and analyzing network threats[cite: 21, 22].
+                </p>
 
-            <!-- Education Section -->
-            <section id="education">
-                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                <ul class="academic-list">
+                <p class="bio-paragraph">
+                    For additional information, please see my <a onclick="switchPage('cv')">CV</a> and <a onclick="switchPage('projects')">Projects</a>.
+                </p>
+
+                <h3 class="section-heading">Recent News</h3>
+                <ul class="academic-bullet-list">
                     <li>
-                        <strong>Bachelor of Science in Computer Science & Engineering</strong> — Green University of Bangladesh[cite: 16]
-                        <br><small style="color: #666;">CGPA: 3.25 | Expected Graduation: January 2027[cite: 16]</small>
+                        <span class="date-tag">[May 2026 - September 2026]</span> - Served as Secretary of the IEEE Computer Society GUB Student Branch Chapter[cite: 22].
                     </li>
                     <li>
-                        <strong>Higher Secondary Certificate (HSC) in Science</strong> — Gridkalindia Hazera Hasmat Degree College[cite: 16]
-                        <br><small style="color: #666;">GPA: 4.58 | Completed: 2021[cite: 16]</small>
+                        <span class="date-tag">[January 2026]</span> - Participated & certified in Techathon Nationals Rover Summit 2026 by IUT Robotics Society[cite: 21].
+                    </li>
+                    <li>
+                        <span class="date-tag">[July 2025]</span> - Achieved <strong>Certified Cybersecurity Educator Professional (CCEP)</strong> from Red Team Leaders and Ethical Hacker Certification from Cisco Networking Academy[cite: 21].
+                    </li>
+                    <li>
+                        <span class="date-tag">[July 2025]</span> - Completed Foundations of Cybersecurity & Play It Safe from Google (Coursera)[cite: 21].
                     </li>
                 </ul>
-            </section>
 
-            <!-- Certifications Section -->
-            <section id="certifications">
-                <h3><i class="fas fa-certificate"></i> Certifications, Frameworks & Simulations</h3>
-                <ul class="academic-list">
-                    <li><span class="badge-tag">Certification</span> Certified Cybersecurity Educator Professional (CCEP) — Red Team Leaders (Jul 2025)[cite: 15]</li>
-                    <li><span class="badge-tag">Certification</span> Ethical Hacker — Cisco Networking Academy (Jul 2025)[cite: 15]</li>
-                    <li><span class="badge-tag">Certification</span> Foundations of Cybersecurity & Play It Safe — Google / Coursera (Jul 2025)[cite: 15]</li>
-                    <li><span class="badge-tag">Certification</span> Connect and Protect: Networks and Network Security — Google (Dec 2024)[cite: 15]</li>
-                    <li><span class="badge-tag">Certification</span> Fundamentals of AI Security & Row-Level Security — Microsoft[cite: 15]</li>
-                    <li><span class="badge-tag">Training</span> Python (Django) 80-Hours Training — IIT, Jahangirnagar University (EDGE Project)[cite: 15]</li>
-                    <li><span class="badge-tag">Framework</span> ISO/IEC 27001 (ISMS), ISO 9001:2015 (QMS), NIST Cyber Security Framework (CSF) — Alison[cite: 15]</li>
-                    <li><span class="badge-tag">Simulation</span> Cybersecurity Analyst, Management & Risk Simulations — TATA, ANZ, Mastercard, Commonwealth Bank (Forage)[cite: 15]</li>
+                <div class="back-to-top">
+                    <a onclick="scrollToTop()">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- 2. PROJECTS PAGE TAB -->
+            <div id="page-projects" class="tab-page">
+                <h3 class="section-heading" style="margin-top:0;">Technical Projects</h3>
+                <ul class="academic-bullet-list">
+                    <li>
+                        <span class="item-title">SentinelShield: Advanced Linux Security Hardening Threat Audit Framework</span>[cite: 22]
+                        <div class="sub-detail">Technologies: Bash Scripting, Automated Audit Security Protocols[cite: 22]</div>
+                    </li>
+                    <li>
+                        <span class="item-title">Enterprise File Vault with Hybrid Encryption & Audit Trail</span>[cite: 22]
+                        <div class="sub-detail">Technologies: AES-256-GCM, RSA-2048, SHA-512 Cryptography[cite: 22]</div>
+                    </li>
+                    <li>
+                        <span class="item-title">Cyber Immune Grid System (CIG): Self-Healing Network</span>[cite: 22]
+                        <div class="tech-detail sub-detail">Technologies: Nmap, Metasploit, Security Testing[cite: 21, 22]</div>
+                    </li>
+                    <li>
+                        <span class="item-title">AI-Driven Zero-Day Threat Indication Anomaly Detection</span>[cite: 22]
+                        <div class="sub-detail">Technologies: Python, Machine Learning Anomaly Detection, Cybersecurity Tools[cite: 21, 22]</div>
+                    </li>
+                    <li>
+                        <span class="item-title">Corporate Office Network Infrastructure Design</span>[cite: 22]
+                        <div class="sub-detail">Technologies: Cisco Packet Tracer, Routing Protocols (TCP/UDP), VLANs, Subnetting[cite: 22]</div>
+                    </li>
+                    <li>
+                        <span class="item-title">EDGE-Project</span>[cite: 22]
+                        <div class="sub-detail">Technologies: Python (Analysis/Backend), Django[cite: 21, 22]</div>
+                    </li>
+                    <li>
+                        <span class="item-title">Eduatlas: University & College Admission Platform</span>[cite: 22]
+                        <div class="sub-detail">Technologies: HTML, CSS, JavaScript, PHP, MySQL, ProFreeHost[cite: 22]</div>
+                    </li>
                 </ul>
-            </section>
 
-            <!-- References Section -->
-            <section id="references">
-                <h3><i class="fas fa-user-check"></i> Academic References</h3>
-                
-                <div class="reference-card">
-                    <strong>Prof. Dr. Md. Saiful Azad</strong>[cite: 16]<br>
-                    <small>Professor, Dept. of Computer Science and Engineering, United International University[cite: 16]</small><br>
-                    <small>Former Dean, FSE & Chairperson, Dept. of CSE, Green University of Bangladesh[cite: 16]</small><br>
-                    <small><i class="fas fa-envelope"></i> saiful@cse.uiu.ac.bd</small>[cite: 16]
+                <div class="back-to-top">
+                    <a onclick="scrollToTop()">Back to Top</a>
                 </div>
+            </div>
 
-                <div class="reference-card">
-                    <strong>Palash Roy</strong>[cite: 16]<br>
-                    <small>Lecturer, Dept. of Computer Science and Engineering, University of Dhaka[cite: 16]</small><br>
-                    <small><i class="fas fa-phone"></i> +8801846869580 | <i class="fas fa-envelope"></i> palash@cse.du.ac.bd | <i class="fas fa-globe"></i> palashroy975.github.io</small>[cite: 16]
+            <!-- 3. EDUCATION & AWARDS PAGE TAB -->
+            <div id="page-education" class="tab-page">
+                <h3 class="section-heading" style="margin-top:0;">Education</h3>
+                <ul class="academic-bullet-list">
+                    <li>
+                        <span class="item-title">Bachelor of Science in Computer Science & Engineering</span>[cite: 22]<br>
+                        Green University of Bangladesh[cite: 22]<br>
+                        <span class="sub-detail">CGPA: 3.25 | Expected Graduation: January 2027[cite: 22]</span>
+                    </li>
+                    <li>
+                        <span class="item-title">Higher Secondary Certificate (HSC) in Science</span>[cite: 22]<br>
+                        Gridkalindia Hazera Hasmat Degree College[cite: 22]<br>
+                        <span class="sub-detail">GPA: 4.58 | Completion Year: 2021[cite: 22]</span>
+                    </li>
+                </ul>
+
+                <h3 class="section-heading">Professional Certifications & Training</h3>
+                <ul class="academic-bullet-list">
+                    <li>
+                        <span class="date-tag">[July 2025]</span> Certified Cybersecurity Educator Professional (CCEP) - Red Team Leaders[cite: 21].
+                    </li>
+                    <li>
+                        <span class="date-tag">[July 2025]</span> Ethical Hacker Certification - Cisco Networking Academy[cite: 21].
+                    </li>
+                    <li>
+                        <span class="date-tag">[July 2025]</span> Foundations of Cybersecurity & Play It Safe: Manage Security Risks - Google (Coursera)[cite: 21].
+                    </li>
+                    <li>
+                        <span class="date-tag">[December 2024]</span> Connect and Protect: Networks and Network Security - Google (Coursera)[cite: 21].
+                    </li>
+                    <li>
+                        <span class="date-tag">[November 2024 - February 2025]</span> Python (Django) 80-Hours Training from IIT, Jahangirnagar University (EDGE Project)[cite: 21].
+                    </li>
+                    <li>
+                        <span class="date-tag">[April 2024 / November 2025]</span> Fundamentals of AI Security & Implement Row-Level Security - Microsoft[cite: 21].
+                    </li>
+                </ul>
+
+                <div class="back-to-top">
+                    <a onclick="scrollToTop()">Back to Top</a>
                 </div>
-            </section>
+            </div>
+
+            <!-- 4. ACTIVITIES PAGE TAB -->
+            <div id="page-activities" class="tab-page">
+                <h3 class="section-heading" style="margin-top:0;">Activities</h3>
+                <ul class="academic-bullet-list">
+                    <li>
+                        <span class="date-tag">[May 2026 - September 2026]</span> <strong>Secretary</strong>, IEEE Computer Society GUB Student Branch Chapter[cite: 22].
+                    </li>
+                    <li>
+                        <span class="date-tag">[January 2025 - January 2026]</span> <strong>Membership Development Coordinator</strong>, IEEE Student Branch, Green University of Bangladesh (IEEE SBGUB)[cite: 22].
+                    </li>
+                    <li>
+                        <span class="date-tag">[June 2025 - June 2026]</span> <strong>Campus Ambassador</strong>, BUET Robotics Society[cite: 22].
+                    </li>
+                    <li>
+                        <span class="date-tag">[May 2025 - May 2026]</span> <strong>Member</strong>, ISC2[cite: 22].
+                    </li>
+                    <li>
+                        <span class="date-tag">[December 2025]</span> Volunteer, <strong>The 7th IEEE International Conference on Sustainable Technologies for Industry (STI) 5.0</strong>, Green University of Bangladesh[cite: 22].
+                    </li>
+                    <li>
+                        Active Member of the Google Developer Group and Ambassador for the Microsoft Campus Ambassador Program[cite: 22].
+                    </li>
+                </ul>
+
+                <div class="back-to-top">
+                    <a onclick="scrollToTop()">Back to Top</a>
+                </div>
+            </div>
+
+            <!-- 5. CV & REFERENCES PAGE TAB -->
+            <div id="page-cv" class="tab-page">
+                <h3 class="section-heading" style="margin-top:0;">Curriculum Vitae</h3>
+                <p class="bio-paragraph">
+                    Download complete PDF document or view formal references below[cite: 21, 22].
+                </p>
+
+                <h3 class="section-heading">Academic References</h3>
+                <ul class="academic-bullet-list">
+                    <li>
+                        <span class="item-title">Prof. Dr. Md. Saiful Azad</span>[cite: 22]<br>
+                        Professor, Dept. of Computer Science and Engineering, United International University[cite: 22]<br>
+                        <span class="sub-detail">Former Dean, FSE & Chairperson, Dept. of CSE, Green University of Bangladesh[cite: 22]</span><br>
+                        <span class="sub-detail">Email: saiful@cse.uiu.ac.bd</span>[cite: 22]
+                    </li>
+                    <li style="margin-top: 15px;">
+                        <span class="item-title">Palash Roy</span>[cite: 22]<br>
+                        Lecturer, Dept. of Computer Science and Engineering, University of Dhaka[cite: 22]<br>
+                        <span class="sub-detail">Phone: +8801846869580 | Email: palash@cse.du.ac.bd[cite: 22]</span><br>
+                        <span class="sub-detail">Website: <a href="https://palashroy975.github.io" target="_blank">palashroy975.github.io</a></span>[cite: 22]
+                    </li>
+                </ul>
+
+                <div class="back-to-top">
+                    <a onclick="scrollToTop()">Back to Top</a>
+                </div>
+            </div>
+
         </main>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Promod Chandra Das. Hosted on GitHub Pages.</p>
-    </footer>
-
-    <!-- Interactive JavaScript -->
+    <!-- JavaScript to Handle Dynamic Single Page Tabs & Smooth Scroll -->
     <script>
-        // Interactive Project Filter Function
-        function filterProjects(category) {
-            const items = document.querySelectorAll('#project-list li');
-            const buttons = document.querySelectorAll('.filter-btn');
+        function switchPage(pageId) {
+            // Hide all tab pages
+            const pages = document.querySelectorAll('.tab-page');
+            pages.forEach(page => page.classList.remove('active'));
 
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            // Remove active style from navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
 
-            items.forEach(item => {
-                if (category === 'all' || item.getAttribute('data-category').includes(category)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+            // Show selected page
+            document.getElementById('page-' + pageId).classList.add('active');
+
+            // Highlight selected nav item
+            document.getElementById('nav-' + pageId).classList.add('active');
+
+            // Scroll smoothly to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Active Navigation Highlighter on Scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('nav a').forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === '#' + current) {
-                    a.classList.add('active');
-                }
-            });
-        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
